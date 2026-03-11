@@ -1,0 +1,46 @@
+/**:
+  ros__parameters:
+    # Camera identification
+    camera_name: 'camera'
+    serial_no: ''
+    usb_transport_type: ''
+
+    # Enable streams
+    enable_color: true
+    enable_depth: true
+    enable_infra1: false
+    enable_infra2: false
+
+    # Color stream configuration
+    # On Jetson Thor (ARM), the default MJPEG format is not supported for color streams.
+    # Use 'rgb8' or 'bgr8' to receive color images correctly.
+    color_width: 640
+    color_height: 480
+    color_fps: 30
+    color_format: 'rgb8'
+
+    # Depth stream configuration
+    depth_width: 640
+    depth_height: 480
+    depth_fps: 30
+
+    # Alignment: align depth to color frame
+    align_depth.enable: true
+
+    # Point cloud
+    pointcloud.enable: false
+    pointcloud.stream_filter: 2
+    pointcloud.stream_index_filter: 0
+
+    # IMU
+    enable_gyro: false
+    enable_accel: false
+
+    # Misc
+    publish_tf: true
+    tf_publish_rate: 0.0
+    diagnostics_period: 0.0
+    unite_imu_method: 0
+    json_file_path: ''
+    log_level: 'info'
+    output: 'screen'
